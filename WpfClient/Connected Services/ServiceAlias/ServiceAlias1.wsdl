@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceAlias" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.0.101:8000/WcfService/ServiceAlias/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.0.101:8000/WcfService/ServiceAlias/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WcfService" />
+      <xsd:import schemaLocation="http://192.168.0.101:8000/WcfService/ServiceAlias/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.0.101:8000/WcfService/ServiceAlias/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.0.101:8000/WcfService/ServiceAlias/?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceAlias_GetDataAlias_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataAlias" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetDataAlias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataAliasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetDataAlias_InvalidUserIPFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q1:InvalidUserIPFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetDataAlias_InvalidDataBaseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q2:InvalidDataBaseFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetDataAlias_AliasNotExistFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q3:AliasNotExistFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetNode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNode" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetNode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetNode_InvalidUserIPFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q4:InvalidUserIPFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetNode_InvalidDataBaseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q5:InvalidDataBaseFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetNode_ItemNotExcistFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q6:ItemNotExcistFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetNode_AliasNotExistFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q7:AliasNotExistFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFile" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetFile_InvalidUserIPFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q8:InvalidUserIPFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetFile_ItemNotExcistFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q9:ItemNotExcistFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_GetFile_AliasNotExistFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q10:AliasNotExistFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_LenghtFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:LenghtFile" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_LenghtFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LenghtFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_LenghtFile_InvalidUserIPFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q11:InvalidUserIPFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_LenghtFile_ItemNotExcistFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q12:ItemNotExcistFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_LenghtFile_AliasNotExistFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q13:AliasNotExistFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_MD5HashFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:MD5HashFile" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_MD5HashFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MD5HashFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_MD5HashFile_InvalidUserIPFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q14:InvalidUserIPFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_MD5HashFile_AliasNotExistFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q15:AliasNotExistFault" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAlias_MD5HashFile_ItemNotExcistFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WcfService" name="detail" element="q16:ItemNotExcistFault" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceAlias">
+    <wsdl:operation name="GetDataAlias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAlias/GetDataAlias" message="tns:IServiceAlias_GetDataAlias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAlias/GetDataAliasResponse" message="tns:IServiceAlias_GetDataAlias_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/GetDataAliasInvalidUserIPFaultFault" name="InvalidUserIPFaultFault" message="tns:IServiceAlias_GetDataAlias_InvalidUserIPFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/GetDataAliasInvalidDataBaseFaultFault" name="InvalidDataBaseFaultFault" message="tns:IServiceAlias_GetDataAlias_InvalidDataBaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/GetDataAliasAliasNotExistFaultFault" name="AliasNotExistFaultFault" message="tns:IServiceAlias_GetDataAlias_AliasNotExistFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAlias/GetNode" message="tns:IServiceAlias_GetNode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAlias/GetNodeResponse" message="tns:IServiceAlias_GetNode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/GetNodeInvalidUserIPFaultFault" name="InvalidUserIPFaultFault" message="tns:IServiceAlias_GetNode_InvalidUserIPFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/GetNodeInvalidDataBaseFaultFault" name="InvalidDataBaseFaultFault" message="tns:IServiceAlias_GetNode_InvalidDataBaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/GetNodeItemNotExcistFaultFault" name="ItemNotExcistFaultFault" message="tns:IServiceAlias_GetNode_ItemNotExcistFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/GetNodeAliasNotExistFaultFault" name="AliasNotExistFaultFault" message="tns:IServiceAlias_GetNode_AliasNotExistFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAlias/GetFile" message="tns:IServiceAlias_GetFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAlias/GetFileResponse" message="tns:IServiceAlias_GetFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/GetFileInvalidUserIPFaultFault" name="InvalidUserIPFaultFault" message="tns:IServiceAlias_GetFile_InvalidUserIPFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/GetFileItemNotExcistFaultFault" name="ItemNotExcistFaultFault" message="tns:IServiceAlias_GetFile_ItemNotExcistFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/GetFileAliasNotExistFaultFault" name="AliasNotExistFaultFault" message="tns:IServiceAlias_GetFile_AliasNotExistFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LenghtFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAlias/LenghtFile" message="tns:IServiceAlias_LenghtFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAlias/LenghtFileResponse" message="tns:IServiceAlias_LenghtFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/LenghtFileInvalidUserIPFaultFault" name="InvalidUserIPFaultFault" message="tns:IServiceAlias_LenghtFile_InvalidUserIPFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/LenghtFileItemNotExcistFaultFault" name="ItemNotExcistFaultFault" message="tns:IServiceAlias_LenghtFile_ItemNotExcistFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/LenghtFileAliasNotExistFaultFault" name="AliasNotExistFaultFault" message="tns:IServiceAlias_LenghtFile_AliasNotExistFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MD5HashFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAlias/MD5HashFile" message="tns:IServiceAlias_MD5HashFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAlias/MD5HashFileResponse" message="tns:IServiceAlias_MD5HashFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/MD5HashFileInvalidUserIPFaultFault" name="InvalidUserIPFaultFault" message="tns:IServiceAlias_MD5HashFile_InvalidUserIPFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/MD5HashFileAliasNotExistFaultFault" name="AliasNotExistFaultFault" message="tns:IServiceAlias_MD5HashFile_AliasNotExistFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceAlias/MD5HashFileItemNotExcistFaultFault" name="ItemNotExcistFaultFault" message="tns:IServiceAlias_MD5HashFile_ItemNotExcistFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceAlias" type="tns:IServiceAlias">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataAlias">
+      <soap:operation soapAction="http://tempuri.org/IServiceAlias/GetDataAlias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InvalidUserIPFaultFault">
+        <soap:fault use="literal" name="InvalidUserIPFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidDataBaseFaultFault">
+        <soap:fault use="literal" name="InvalidDataBaseFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AliasNotExistFaultFault">
+        <soap:fault use="literal" name="AliasNotExistFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNode">
+      <soap:operation soapAction="http://tempuri.org/IServiceAlias/GetNode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InvalidUserIPFaultFault">
+        <soap:fault use="literal" name="InvalidUserIPFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidDataBaseFaultFault">
+        <soap:fault use="literal" name="InvalidDataBaseFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ItemNotExcistFaultFault">
+        <soap:fault use="literal" name="ItemNotExcistFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AliasNotExistFaultFault">
+        <soap:fault use="literal" name="AliasNotExistFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap:operation soapAction="http://tempuri.org/IServiceAlias/GetFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InvalidUserIPFaultFault">
+        <soap:fault use="literal" name="InvalidUserIPFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ItemNotExcistFaultFault">
+        <soap:fault use="literal" name="ItemNotExcistFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AliasNotExistFaultFault">
+        <soap:fault use="literal" name="AliasNotExistFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LenghtFile">
+      <soap:operation soapAction="http://tempuri.org/IServiceAlias/LenghtFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InvalidUserIPFaultFault">
+        <soap:fault use="literal" name="InvalidUserIPFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ItemNotExcistFaultFault">
+        <soap:fault use="literal" name="ItemNotExcistFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AliasNotExistFaultFault">
+        <soap:fault use="literal" name="AliasNotExistFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MD5HashFile">
+      <soap:operation soapAction="http://tempuri.org/IServiceAlias/MD5HashFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="InvalidUserIPFaultFault">
+        <soap:fault use="literal" name="InvalidUserIPFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AliasNotExistFaultFault">
+        <soap:fault use="literal" name="AliasNotExistFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ItemNotExcistFaultFault">
+        <soap:fault use="literal" name="ItemNotExcistFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceAlias">
+    <wsdl:port name="BasicHttpBinding_IServiceAlias" binding="tns:BasicHttpBinding_IServiceAlias">
+      <soap:address location="http://192.168.0.101:8000/WcfService/ServiceAlias/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="InvalidUserIPFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvalidUserIPFault" nillable="true" type="tns:InvalidUserIPFault" />
+  <xs:complexType name="InvalidDataBaseFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvalidDataBaseFault" nillable="true" type="tns:InvalidDataBaseFault" />
+  <xs:complexType name="AliasNotExistFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AliasNotExistFault" nillable="true" type="tns:AliasNotExistFault" />
+  <xs:complexType name="CompositeTypeNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NodeArray" nillable="true" type="tns:ArrayOfAliasNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompositeTypeNode" nillable="true" type="tns:CompositeTypeNode" />
+  <xs:complexType name="ArrayOfAliasNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AliasNode" nillable="true" type="tns:AliasNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAliasNode" nillable="true" type="tns:ArrayOfAliasNode" />
+  <xs:complexType name="AliasNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsDirectory" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AliasNode" nillable="true" type="tns:AliasNode" />
+  <xs:complexType name="ItemNotExcistFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemNotExcistFault" nillable="true" type="tns:ItemNotExcistFault" />
+</xs:schema>
