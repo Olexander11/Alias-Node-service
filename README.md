@@ -1,7 +1,7 @@
 # Alias-Node-service
-Myself study progects. 
-This is project created during the learning process.   The project consists of 4 programs. 
-SqliteDB The database that serves the base of the Sqlite and consists of 2 tabl.  
+
+This is solution created during the learning process.   The solution consists of 4 projects. 
+SqliteDB The database that serves the base of the Sqlite and consists of 2 table.  
 WindowsFormConfiguration is the Database Configurator.  
 WcfService  launches the services.  
 WpfClient  is a client program.
@@ -15,7 +15,7 @@ To specify the address for the services - use the file App.config, specify the a
  A similar address should be put in the client program in the file App.config, as shown in the example:    
  `<endpoint address="http://192.168.0.101:8000/WcfService/ServiceAlias/"`
 
-First, on the servo machine, run the configurator to specify the required aliases-folders. 
+First, on the server machine, run the configurator to specify the required aliases-folders. 
 Then, on the same machine, run the server program to provide services.
 And finally, on the client machine, launch a client program.
 
