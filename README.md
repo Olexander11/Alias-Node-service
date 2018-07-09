@@ -1,5 +1,5 @@
 # Alias-Node-service
-Myself study progects
+Myself study progects. 
 This is project created during the learning process.   The project consists of 4 programs. 
 SqliteDB The database that serves the base of the Sqlite and consists of 2 tabl.  
 WindowsFormConfiguration is the Database Configurator.  
