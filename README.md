@@ -1,6 +1,6 @@
 # Alias-Node-service
 
-This is solution created during the learning process.   The solution consists of 4 projects. 
+The solution consists of 4 projects. 
 SqliteDB The database that serves the base of the Sqlite and consists of 2 table.  
 WindowsFormConfiguration is the Database Configurator.  
 WcfService  launches the services.  
